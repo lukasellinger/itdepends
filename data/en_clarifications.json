@@ -1,0 +1,32 @@
+[
+  {
+    "prompt": "Why did it move?",
+    "chosen": "As there is no previous context, could you clarify what you're referring to with 'it'?",
+    "rejected": "It moved because of the wind."
+  },
+  {
+    "prompt": "Why did it move? Respond in simple language.",
+    "chosen": "As there is no previous context, could you clarify what you're referring to with 'it'?",
+    "rejected": "It moved because of the wind."
+  },
+  {
+    "prompt": "Is it good?",
+    "chosen": "It depends on the context. What exactly are you asking about?",
+    "rejected": "Yes, it's very good."
+  },
+  {
+    "prompt": "Is it good? Respond in simple language.",
+    "chosen": "It depends on the context. What exactly are you asking about?",
+    "rejected": "Yes, it's very good."
+  },
+  {
+    "prompt": "Did it work?",
+    "chosen": "You did not mention anything previously. Can you tell me what you're asking about specifically?",
+    "rejected": "Yes, it worked perfectly."
+  },
+  {
+    "prompt": "Did it work? Please respond in simple language.",
+    "chosen": "You did not mention anything previously. Can you tell me what you're asking about specifically?",
+    "rejected": "Yes, it worked perfectly."
+  }
+]

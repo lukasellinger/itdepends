@@ -1,0 +1,14 @@
+from dataclasses import dataclass
+from pathlib import Path
+
+PROJECT_DIR = Path(__file__).parent
+
+@dataclass
+class Credentials:
+    openai_api_key: str = '<your-key>'
+    hf_api_key: str = '<your-key>'
+    fw_api_key: str = '<your-key>'
+    serper_api_key: str = '<your-key>'
+    deepl_api_key: str = '<your-key>'
+    openrouter_api_key: str = '<your-key>'
+    runpod_api_key: str = '<your-key>'

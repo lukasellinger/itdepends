@@ -1,0 +1,1 @@
+DATA_TYPES = ['shared_ref', 'clear_ref']

@@ -1,0 +1,314 @@
+[
+  {
+    "en": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Why did it move?"
+        }
+      ],
+      "chosen": "As there is no previous context, could you clarify what you're referring to with 'it'?",
+      "rejected": "It moved because of the wind."
+    },
+    "fr": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Pourquoi a-t-il boug\u00e9 ?"
+        }
+      ],
+      "chosen": "En l'absence de contexte ant\u00e9rieur, pourriez-vous pr\u00e9ciser ce \u00e0 quoi vous faites r\u00e9f\u00e9rence avec le terme \"il\" ?",
+      "rejected": "Il s'est d\u00e9plac\u00e9 sous l'effet du vent."
+    },
+    "ar": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0644\u0645\u0627\u0630\u0627 \u062a\u062d\u0631\u0643\u062a\u061f"
+        }
+      ],
+      "chosen": "\u0628\u0645\u0627 \u0623\u0646\u0647 \u0644\u0627 \u064a\u0648\u062c\u062f \u0633\u064a\u0627\u0642 \u0633\u0627\u0628\u0642\u060c \u0647\u0644 \u064a\u0645\u0643\u0646\u0643 \u062a\u0648\u0636\u064a\u062d \u0645\u0627 \u062a\u0634\u064a\u0631 \u0625\u0644\u064a\u0647 \u0628\u0640 \"\u0647\u0648\"\u061f",
+      "rejected": "\u062a\u062d\u0631\u0643\u062a \u0628\u0633\u0628\u0628 \u0627\u0644\u0631\u064a\u0627\u062d."
+    },
+    "ru": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u041f\u043e\u0447\u0435\u043c\u0443 \u043e\u043d\u0430 \u0441\u0434\u0432\u0438\u043d\u0443\u043b\u0430\u0441\u044c \u0441 \u043c\u0435\u0441\u0442\u0430?"
+        }
+      ],
+      "chosen": "\u041f\u043e\u0441\u043a\u043e\u043b\u044c\u043a\u0443 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0438\u0439 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442 \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442, \u043d\u0435 \u043c\u043e\u0433\u043b\u0438 \u0431\u044b \u0432\u044b \u0443\u0442\u043e\u0447\u043d\u0438\u0442\u044c, \u0447\u0442\u043e \u0432\u044b \u0438\u043c\u0435\u0435\u0442\u0435 \u0432 \u0432\u0438\u0434\u0443, \u0433\u043e\u0432\u043e\u0440\u044f \"\u044d\u0442\u043e\"?",
+      "rejected": "\u041e\u043d \u0434\u0432\u0438\u0433\u0430\u043b\u0441\u044f \u0431\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u044f \u0432\u0435\u0442\u0440\u0443."
+    },
+    "zh": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u5b83\u4e3a\u4ec0\u4e48\u4f1a\u79fb\u52a8\uff1f"
+        }
+      ],
+      "chosen": "\u7531\u4e8e\u6ca1\u6709\u4e0a\u4e0b\u6587\uff0c\u60a8\u80fd\u8bf4\u660e\u4e00\u4e0b \"\u5b83 \"\u6307\u7684\u662f\u4ec0\u4e48\u5417\uff1f",
+      "rejected": "\u56e0\u4e3a\u98ce\uff0c\u5b83\u52a8\u4e86\u3002"
+    }
+  },
+  {
+    "en": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Why did it move? Respond in simple language."
+        }
+      ],
+      "chosen": "As there is no previous context, could you clarify what you're referring to with 'it'?",
+      "rejected": "It moved because of the wind."
+    },
+    "fr": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Pourquoi a-t-il boug\u00e9 ? R\u00e9pondez dans un langage simple."
+        }
+      ],
+      "chosen": "En l'absence de contexte ant\u00e9rieur, pourriez-vous pr\u00e9ciser ce \u00e0 quoi vous faites r\u00e9f\u00e9rence avec le terme \"il\" ?",
+      "rejected": "Il s'est d\u00e9plac\u00e9 sous l'effet du vent."
+    },
+    "ar": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0644\u0645\u0627\u0630\u0627 \u062a\u062d\u0631\u0643\u062a\u061f \u0623\u062c\u0628 \u0628\u0644\u063a\u0629 \u0628\u0633\u064a\u0637\u0629."
+        }
+      ],
+      "chosen": "\u0628\u0645\u0627 \u0623\u0646\u0647 \u0644\u0627 \u064a\u0648\u062c\u062f \u0633\u064a\u0627\u0642 \u0633\u0627\u0628\u0642\u060c \u0647\u0644 \u064a\u0645\u0643\u0646\u0643 \u062a\u0648\u0636\u064a\u062d \u0645\u0627 \u062a\u0634\u064a\u0631 \u0625\u0644\u064a\u0647 \u0628\u0640 \"\u0647\u0648\"\u061f",
+      "rejected": "\u062a\u062d\u0631\u0643\u062a \u0628\u0633\u0628\u0628 \u0627\u0644\u0631\u064a\u0627\u062d."
+    },
+    "ru": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u041f\u043e\u0447\u0435\u043c\u0443 \u043e\u043d\u0430 \u0441\u0434\u0432\u0438\u043d\u0443\u043b\u0430\u0441\u044c \u0441 \u043c\u0435\u0441\u0442\u0430? \u041e\u0442\u0432\u0435\u0442\u044c\u0442\u0435 \u043f\u0440\u043e\u0441\u0442\u044b\u043c \u044f\u0437\u044b\u043a\u043e\u043c."
+        }
+      ],
+      "chosen": "\u041f\u043e\u0441\u043a\u043e\u043b\u044c\u043a\u0443 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0438\u0439 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442 \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442, \u043d\u0435 \u043c\u043e\u0433\u043b\u0438 \u0431\u044b \u0432\u044b \u0443\u0442\u043e\u0447\u043d\u0438\u0442\u044c, \u0447\u0442\u043e \u0432\u044b \u0438\u043c\u0435\u0435\u0442\u0435 \u0432 \u0432\u0438\u0434\u0443, \u0433\u043e\u0432\u043e\u0440\u044f \"\u044d\u0442\u043e\"?",
+      "rejected": "\u041e\u043d \u0434\u0432\u0438\u0433\u0430\u043b\u0441\u044f \u0431\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u044f \u0432\u0435\u0442\u0440\u0443."
+    },
+    "zh": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u4e3a\u4ec0\u4e48\u4f1a\u79fb\u52a8\uff1f\u7528\u7b80\u5355\u7684\u8bed\u8a00\u56de\u7b54\u3002"
+        }
+      ],
+      "chosen": "\u7531\u4e8e\u6ca1\u6709\u4e0a\u4e0b\u6587\uff0c\u60a8\u80fd\u8bf4\u660e\u4e00\u4e0b \"\u5b83 \"\u6307\u7684\u662f\u4ec0\u4e48\u5417\uff1f",
+      "rejected": "\u56e0\u4e3a\u98ce\uff0c\u5b83\u52a8\u4e86\u3002"
+    }
+  },
+  {
+    "en": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Is it good?"
+        }
+      ],
+      "chosen": "It depends on the context. What exactly are you asking about?",
+      "rejected": "Yes, it's very good."
+    },
+    "fr": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Est-ce que c'est bon ?"
+        }
+      ],
+      "chosen": "Cela d\u00e9pend du contexte. De quoi s'agit-il exactement ?",
+      "rejected": "Oui, c'est tr\u00e8s bien."
+    },
+    "ar": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0647\u0644 \u0647\u0648 \u062c\u064a\u062f\u061f"
+        }
+      ],
+      "chosen": "\u064a\u0639\u062a\u0645\u062f \u0630\u0644\u0643 \u0639\u0644\u0649 \u0627\u0644\u0633\u064a\u0627\u0642. \u0645\u0627 \u0627\u0644\u0630\u064a \u062a\u0633\u0623\u0644 \u0639\u0646\u0647 \u0628\u0627\u0644\u0636\u0628\u0637\u061f",
+      "rejected": "\u0646\u0639\u0645\u060c \u0625\u0646\u0647 \u062c\u064a\u062f \u062c\u062f\u0627\u064b."
+    },
+    "ru": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0425\u043e\u0440\u043e\u0448\u043e \u043b\u0438 \u044d\u0442\u043e?"
+        }
+      ],
+      "chosen": "\u042d\u0442\u043e \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0430. \u041e \u0447\u0435\u043c \u0438\u043c\u0435\u043d\u043d\u043e \u0432\u044b \u0441\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442\u0435?",
+      "rejected": "\u0414\u0430, \u044d\u0442\u043e \u043e\u0447\u0435\u043d\u044c \u0445\u043e\u0440\u043e\u0448\u043e."
+    },
+    "zh": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u597d\u5403\u5417\uff1f"
+        }
+      ],
+      "chosen": "\u8fd9\u53d6\u51b3\u4e8e\u5177\u4f53\u60c5\u51b5\u3002\u4f60\u5230\u5e95\u60f3\u95ee\u4ec0\u4e48\uff1f",
+      "rejected": "\u662f\u7684\uff0c\u975e\u5e38\u597d\u3002"
+    }
+  },
+  {
+    "en": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Is it good? Respond in simple language."
+        }
+      ],
+      "chosen": "It depends on the context. What exactly are you asking about?",
+      "rejected": "Yes, it's very good."
+    },
+    "fr": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Est-ce que c'est bien ? R\u00e9pondez dans un langage simple."
+        }
+      ],
+      "chosen": "Cela d\u00e9pend du contexte. De quoi s'agit-il exactement ?",
+      "rejected": "Oui, c'est tr\u00e8s bien."
+    },
+    "ar": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0647\u0644 \u0647\u0648 \u062c\u064a\u062f\u061f \u0623\u062c\u0628 \u0628\u0644\u063a\u0629 \u0628\u0633\u064a\u0637\u0629."
+        }
+      ],
+      "chosen": "\u064a\u0639\u062a\u0645\u062f \u0630\u0644\u0643 \u0639\u0644\u0649 \u0627\u0644\u0633\u064a\u0627\u0642. \u0645\u0627 \u0627\u0644\u0630\u064a \u062a\u0633\u0623\u0644 \u0639\u0646\u0647 \u0628\u0627\u0644\u0636\u0628\u0637\u061f",
+      "rejected": "\u0646\u0639\u0645\u060c \u0625\u0646\u0647 \u062c\u064a\u062f \u062c\u062f\u0627\u064b."
+    },
+    "ru": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0425\u043e\u0440\u043e\u0448\u043e \u043b\u0438 \u044d\u0442\u043e? \u041e\u0442\u0432\u0435\u0447\u0430\u0439\u0442\u0435 \u043f\u0440\u043e\u0441\u0442\u044b\u043c \u044f\u0437\u044b\u043a\u043e\u043c."
+        }
+      ],
+      "chosen": "\u042d\u0442\u043e \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0430. \u041e \u0447\u0435\u043c \u0438\u043c\u0435\u043d\u043d\u043e \u0432\u044b \u0441\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442\u0435?",
+      "rejected": "\u0414\u0430, \u044d\u0442\u043e \u043e\u0447\u0435\u043d\u044c \u0445\u043e\u0440\u043e\u0448\u043e."
+    },
+    "zh": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u8fd9\u6837\u597d\u5417\uff1f\u7528\u7b80\u5355\u7684\u8bed\u8a00\u56de\u7b54\u3002"
+        }
+      ],
+      "chosen": "\u8fd9\u53d6\u51b3\u4e8e\u5177\u4f53\u60c5\u51b5\u3002\u4f60\u5230\u5e95\u60f3\u95ee\u4ec0\u4e48\uff1f",
+      "rejected": "\u662f\u7684\uff0c\u975e\u5e38\u597d\u3002"
+    }
+  },
+  {
+    "en": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Did it work?"
+        }
+      ],
+      "chosen": "You did not mention anything previously. Can you tell me what you're asking about specifically?",
+      "rejected": "Yes, it worked perfectly."
+    },
+    "fr": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Cela a-t-il fonctionn\u00e9 ?"
+        }
+      ],
+      "chosen": "Vous n'avez rien mentionn\u00e9 auparavant. Pouvez-vous me dire ce que vous demandez pr\u00e9cis\u00e9ment ?",
+      "rejected": "Oui, cela a fonctionn\u00e9 parfaitement."
+    },
+    "ar": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0647\u0644 \u0646\u062c\u062d \u0627\u0644\u0623\u0645\u0631\u061f"
+        }
+      ],
+      "chosen": "\u0644\u0645 \u062a\u0630\u0643\u0631 \u0623\u064a \u0634\u064a\u0621 \u0633\u0627\u0628\u0642\u064b\u0627. \u0647\u0644 \u064a\u0645\u0643\u0646\u0643 \u0623\u0646 \u062a\u062e\u0628\u0631\u0646\u064a \u0645\u0627 \u0627\u0644\u0630\u064a \u062a\u0633\u0623\u0644 \u0639\u0646\u0647 \u0628\u0627\u0644\u062a\u062d\u062f\u064a\u062f\u061f",
+      "rejected": "\u0646\u0639\u0645\u060c \u0644\u0642\u062f \u0646\u062c\u062d \u0627\u0644\u0623\u0645\u0631 \u0628\u0634\u0643\u0644 \u0645\u062b\u0627\u0644\u064a."
+    },
+    "ru": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0421\u0440\u0430\u0431\u043e\u0442\u0430\u043b\u043e \u043b\u0438 \u044d\u0442\u043e?"
+        }
+      ],
+      "chosen": "\u0412\u044b \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u0443\u043f\u043e\u043c\u0438\u043d\u0430\u043b\u0438 \u0440\u0430\u043d\u0435\u0435. \u041c\u043e\u0436\u0435\u0442\u0435 \u043b\u0438 \u0432\u044b \u0441\u043a\u0430\u0437\u0430\u0442\u044c \u043c\u043d\u0435, \u043e \u0447\u0435\u043c \u043a\u043e\u043d\u043a\u0440\u0435\u0442\u043d\u043e \u0432\u044b \u0441\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442\u0435?",
+      "rejected": "\u0414\u0430, \u0432\u0441\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043e\u0442\u043b\u0438\u0447\u043d\u043e."
+    },
+    "zh": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u6709\u7528\u5417\uff1f"
+        }
+      ],
+      "chosen": "\u60a8\u4e4b\u524d\u4ec0\u4e48\u90fd\u6ca1\u63d0\u3002\u80fd\u544a\u8bc9\u6211\u4f60\u5177\u4f53\u60f3\u95ee\u4ec0\u4e48\u5417\uff1f",
+      "rejected": "\u662f\u7684\uff0c\u6548\u679c\u975e\u5e38\u597d\u3002"
+    }
+  },
+  {
+    "en": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Did it work? Please respond in simple language."
+        }
+      ],
+      "chosen": "You did not mention anything previously. Can you tell me what you're asking about specifically?",
+      "rejected": "Yes, it worked perfectly."
+    },
+    "fr": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "Cela a-t-il fonctionn\u00e9 ? Veuillez r\u00e9pondre en termes simples."
+        }
+      ],
+      "chosen": "Vous n'avez rien mentionn\u00e9 auparavant. Pouvez-vous me dire ce que vous demandez pr\u00e9cis\u00e9ment ?",
+      "rejected": "Oui, cela a fonctionn\u00e9 parfaitement."
+    },
+    "ar": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0647\u0644 \u0646\u062c\u062d \u0627\u0644\u0623\u0645\u0631\u061f \u064a\u064f\u0631\u062c\u0649 \u0627\u0644\u0631\u062f \u0628\u0644\u063a\u0629 \u0628\u0633\u064a\u0637\u0629."
+        }
+      ],
+      "chosen": "\u0644\u0645 \u062a\u0630\u0643\u0631 \u0623\u064a \u0634\u064a\u0621 \u0633\u0627\u0628\u0642\u064b\u0627. \u0647\u0644 \u064a\u0645\u0643\u0646\u0643 \u0623\u0646 \u062a\u062e\u0628\u0631\u0646\u064a \u0645\u0627 \u0627\u0644\u0630\u064a \u062a\u0633\u0623\u0644 \u0639\u0646\u0647 \u0628\u0627\u0644\u062a\u062d\u062f\u064a\u062f\u061f",
+      "rejected": "\u0646\u0639\u0645\u060c \u0644\u0642\u062f \u0646\u062c\u062d \u0627\u0644\u0623\u0645\u0631 \u0628\u0634\u0643\u0644 \u0645\u062b\u0627\u0644\u064a."
+    },
+    "ru": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u0421\u0440\u0430\u0431\u043e\u0442\u0430\u043b\u043e \u043b\u0438 \u044d\u0442\u043e? \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043e\u0442\u0432\u0435\u0442\u044c\u0442\u0435 \u043f\u0440\u043e\u0441\u0442\u044b\u043c \u044f\u0437\u044b\u043a\u043e\u043c."
+        }
+      ],
+      "chosen": "\u0412\u044b \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u0443\u043f\u043e\u043c\u0438\u043d\u0430\u043b\u0438 \u0440\u0430\u043d\u0435\u0435. \u041c\u043e\u0436\u0435\u0442\u0435 \u043b\u0438 \u0432\u044b \u0441\u043a\u0430\u0437\u0430\u0442\u044c \u043c\u043d\u0435, \u043e \u0447\u0435\u043c \u043a\u043e\u043d\u043a\u0440\u0435\u0442\u043d\u043e \u0432\u044b \u0441\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442\u0435?",
+      "rejected": "\u0414\u0430, \u0432\u0441\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043e\u0442\u043b\u0438\u0447\u043d\u043e."
+    },
+    "zh": {
+      "prompt": [
+        {
+          "role": "user",
+          "content": "\u6709\u7528\u5417\uff1f\u8bf7\u7528\u7b80\u5355\u7684\u8bed\u8a00\u56de\u7b54\u3002"
+        }
+      ],
+      "chosen": "\u60a8\u4e4b\u524d\u4ec0\u4e48\u90fd\u6ca1\u63d0\u3002\u80fd\u544a\u8bc9\u6211\u4f60\u5177\u4f53\u60f3\u95ee\u4ec0\u4e48\u5417\uff1f",
+      "rejected": "\u662f\u7684\uff0c\u6548\u679c\u975e\u5e38\u597d\u3002"
+    }
+  }
+]

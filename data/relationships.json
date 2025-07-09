@@ -1,0 +1,58 @@
+[
+  {
+    "relation": "CapableOf",
+    "action": "fly",
+    "questions": "questions-capableof-fly.json",
+    "entities": "entities-capableof-fly.json",
+    "contexts": "contexts-capableof-fly.jsonl"
+  },
+  {
+    "relation": "HasProperty",
+    "action": "sweet",
+    "questions": "questions-hasproperty-sweet.json",
+    "entities": "entities-hasproperty-sweet.json",
+    "contexts": "contexts-hasproperty-sweet.jsonl"
+  },
+  {
+    "relation": "MadeOf",
+    "action": "wood",
+    "questions": "questions-madeof-wood.json",
+    "entities": "entities-madeof-wood.json",
+    "contexts": "contexts-madeof-wood.jsonl"
+  },
+  {
+    "relation": "CapableOf",
+    "action": "swim",
+    "questions": "questions-capableof-swim.json",
+    "entities": "entities-capableof-swim.json",
+    "contexts": "contexts-capableof-swim.jsonl"
+  },
+  {
+    "relation": "CapableOf",
+    "action": "run_fast",
+    "questions": "questions-capableof-run_fast.json",
+    "entities": "entities-capableof-run_fast.json",
+    "contexts": "contexts-capableof-run_fast.jsonl"
+  },
+  {
+    "relation": "CapableOf",
+    "action": "climb_trees",
+    "questions": "questions-capableof-climb_trees.json",
+    "entities": "entities-capableof-climb_trees.json",
+    "contexts": "contexts-capableof-climb_trees.jsonl"
+  },
+  {
+    "relation": "HasProperty",
+    "action": "hot",
+    "questions": "questions-hasproperty-hot.json",
+    "entities": "entities-hasproperty-hot.json",
+    "contexts": "contexts-hasproperty-hot.jsonl"
+  },
+  {
+    "relation": "HasProperty",
+    "action": "loud",
+    "questions": "questions-hasproperty-loud.json",
+    "entities": "entities-hasproperty-loud.json",
+    "contexts": "contexts-hasproperty-loud.jsonl"
+  }
+]
