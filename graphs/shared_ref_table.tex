@@ -1,0 +1,48 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{booktabs}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+
+
+\begin{table}[h!]%
+\centering%
+\setlength{\tabcolsep}{5pt}%
+\begin{tabular}{@{}lcccccccccc@{}}%
+\toprule%
+\textbf{Prompt / Model} & \multicolumn{5}{c}{\textbf{Correct}} & \multicolumn{5}{c}{\textbf{Direct}}\\%
+\cmidrule(lr){2%
+-%
+6}%
+\cmidrule(lr){7%
+-%
+11}%
+&En&Fr&Ar&Ru&Zh&En&Fr&Ar&Ru&Zh\\%
+\midrule%
+\multicolumn{11}{l}{\textbf{Prompt: Simple}} \\%
+\openai{} 4o&18.06&7.49&19.82&4.41&23.79&12.78&6.61&\textbf{12.78}&2.20&15.42\\%
+\openai{} 4o-mini&5.29&1.76&11.45&3.52&11.89&3.52&1.76&8.81&1.76&8.37\\%
+\deepseek{} v3&\textbf{48.02}&\textbf{28.19}&\textbf{47.58}&\textbf{19.38}&46.70&10.57&\textbf{11.89}&6.17&3.96&7.49\\%
+\qwen{} 3-32B&33.04&25.99&28.19&12.33&\textbf{56.83}&\textbf{23.35}&\textbf{11.89}&3.96&\textbf{7.93}&\textbf{26.87}\\%
+\meta{} 3.1-8B&11.89&3.96&\textbf{47.58}&4.85&4.85&4.85&0.44&2.20&1.76&1.76\\%
+\midrule%
+\multicolumn{11}{l}{\textbf{Prompt: Normal}} \\%
+\openai{} 4o&\textbf{81.06}&50.66&47.14&57.27&62.11&\textbf{36.56}&\textbf{34.80}&\textbf{30.40}&22.03&21.15\\%
+\openai{} 4o-mini&14.10&11.89&14.10&4.41&18.50&7.05&7.49&8.37&1.76&7.05\\%
+\deepseek{} v3&61.23&61.23&\textbf{65.64}&31.28&49.78&3.96&9.25&10.13&3.52&1.76\\%
+\qwen{} 3-32B&75.77&\textbf{71.37}&56.83&\textbf{63.88}&\textbf{83.26}&29.52&19.38&10.57&\textbf{25.99}&\textbf{25.11}\\%
+\meta{} 3.1-8B&14.54&13.66&7.49&3.96&6.17&5.73&2.20&3.96&1.32&2.64\\\bottomrule%
+%
+\end{tabular}%
+\caption{Evaluation scores per prompt type and language}%
+\end{table}
+
+%
+\end{document}

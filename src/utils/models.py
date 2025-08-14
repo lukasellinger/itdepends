@@ -1,5 +1,5 @@
 MODELS = {
-    'gpt-4o': {'standard': '4o', 'color': '#018571'},
+    'gpt-4o': {'standard': '4o', 'color': '#018571', 'cot-color': '#8c564b'},
     'gpt-4o-mini': {'standard': '4o-mini', 'color': '#dfc27d'},
     'deepseek-v3': {'standard': 'DS-v3', 'color': '#a6611a'},
     'qwen3-32b': {'standard': 'Q-32B', 'color': '#80cdc1'},
@@ -8,3 +8,4 @@ MODELS = {
 }
 
 MODEL_ORDER = ['deepseek-v3', 'gpt-4o-mini', 'qwen3-32b', 'gpt-4o', 'llama-8b']
+DPO_ORDER = ['llama-8b', 'dpo-llama']

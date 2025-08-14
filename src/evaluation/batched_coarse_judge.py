@@ -5,11 +5,11 @@ from data.loader import JSONLineReader
 from evaluation.judge import Judge
 from utils.openai_client import create_batch_job
 
-SPLITS = ['clear_ref']
-MODES = ['normal', 'simple']
-LANGS = ['en', 'fr', 'ar', 'ru', 'zh']
-MODELS = ['dpo-llama'] #['gpt-4o-mini', 'gpt-4o', 'deepseek-v3', 'qwen3-32b', 'llama-8b']
-ORDERS = [[0, 1], [1, 0]]#, [1, 2, 0], [0, 2, 1], [2, 1, 0], [2, 0, 1]]
+SPLITS = ['shared_ref']
+MODES = ['cot_normal', 'cot_simple']
+LANGS = ['en']
+MODELS = ['gpt-4o'] #['gpt-4o-mini', 'gpt-4o', 'deepseek-v3', 'qwen3-32b', 'llama-8b']
+ORDERS = [[0, 1, 2]]#, [1, 2, 0], [0, 2, 1], [2, 1, 0], [2, 0, 1]]
 
 RESPONSE_FILES = []
 for split in SPLITS:
@@ -31,6 +31,10 @@ for response_file in RESPONSE_FILES:
     responses = reader.read(f'{PROJECT_DIR}/data/outputs/' + response_file)
     for idx, response in enumerate(responses):
         answer = response.get('answer')
+        if 'Response: ' in answer:
+            answer = answer.split('Response: ')[1]
+        else:
+            print('no response found.')
         question = response.get('entry').get('question')
         task = {
             "custom_id": f"task-{response_file}-{idx}",

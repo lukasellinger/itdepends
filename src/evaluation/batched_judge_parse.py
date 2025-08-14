@@ -9,8 +9,8 @@ from data.loader import JSONLineReader
 from evaluation.judge import Judge
 
 judge = Judge(data_type='shared_ref')
-INPUT_FILE_COARSE = f"{PROJECT_DIR}/data/raw_judge_outputs/coarse-batch-dpo.jsonl"
-INPUT_FILE_ENTITY = f"{PROJECT_DIR}/data/raw_judge_outputs/entity-batch-dpo.jsonl"
+INPUT_FILE_COARSE = f"{PROJECT_DIR}/data/raw_judge_outputs/coarse-batch-cot.jsonl"
+INPUT_FILE_ENTITY = f"{PROJECT_DIR}/data/raw_judge_outputs/entity-batch-cot.jsonl"
 reader = JSONLineReader()
 coarse_judge_results = reader.read(INPUT_FILE_COARSE)
 entity_judge_results = reader.read(INPUT_FILE_ENTITY)

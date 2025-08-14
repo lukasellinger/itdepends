@@ -8,8 +8,11 @@ from spacy.matcher.dependencymatcher import defaultdict
 
 from config import PROJECT_DIR
 from data.loader import JSONLineReader, JSONReader
-from graphics.cats import generate_cats_graphs, generate_dpo_cats_graphs
-from graphics.correct import generate_correctness_graphs, generate_dpo_correctness_graphs
+from graphics.cats import generate_cats_graphs, generate_dpo_cats_graphs, \
+    generate_cot_cats_graphs  # , #generate_dpo_cats_graphs
+from graphics.correct import generate_correctness_graphs, generate_dpo_correctness_graphs, \
+    generate_cot_correctness_graphs
+from latex.create_table import generate_table
 from latex.model_translation import MODEL_TRANSLATION
 from utils.lang_map import LANG_MAP
 from utils.models import MODELS
@@ -46,9 +49,10 @@ class Analysis:
         variances = defaultdict(lambda: defaultdict(list))
         for lang, lang_stats in stats.items():
             for type_, type_responses in lang_stats.items():
-                summary_stats['correct'][type_] += type_responses['correct']['percentage']['Correct']
-                correct_direct = type_responses['fine_category']['count']['Direct'] / type_responses['correct']['count']['Correct'] * 100
+                summary_stats['correct'][type_] += type_responses['correct']['percentage'].get('Correct', 0)
+                correct_direct = type_responses['fine_category']['count'].get('Direct', 0) / type_responses['correct']['count'].get('Correct', 1)  * 100
                 summary_stats['correct_direct'][type_] += correct_direct
+                summary_stats['direct'][type_] += type_responses['fine_category']['percentage'].get('Direct', 0)
                 variances['correct_direct'][type_].append(correct_direct)
 
                 for category, category_stats in type_responses['coarse_type']['percentage'].items():
@@ -237,8 +241,9 @@ class Analysis:
             data[model] = {'general_stats': general_stats, 'summary_stats': summary_stats}
             for lang, stats in general_stats.items():
                 for type_, type_stats in stats.items():
-                    lang_stats[lang][type_]['correct'] += type_stats['correct']['percentage']['Correct'] * 1/5
-                    lang_stats[lang][type_]['direct_correct'] += type_stats['fine_category']['count']['Direct'] / type_stats['correct']['count']['Correct'] * 100 * 1/5
+                    lang_stats[lang][type_]['correct'] += type_stats['correct']['percentage'].get('Correct', 0)  * 1/5
+                    lang_stats[lang][type_]['direct'] += type_stats['fine_category']['percentage'].get('Direct', 0)  * 1/5
+                    lang_stats[lang][type_]['direct_correct'] += type_stats['fine_category']['count'].get('Direct', 0)  / type_stats['correct']['count'].get('Correct', 1)  * 100 * 1/5
 
         max_direct, min_direct = 0, 100
         for mode, model_stats in data.items():
@@ -263,8 +268,8 @@ class Analysis:
         #    {MODEL_TRANSLATION.get(model): vals["pos_stats"]["simple"]['total']['percentage'] for model, vals in data.items()}).T.round(2)
         #normal_df = pd.DataFrame(
         #    {MODEL_TRANSLATION.get(model): vals["pos_stats"]["normal"]['total']['percentage'] for model, vals in data.items()}).T.round(2)
-        #self.generate_correctness_graph(data=aggregated)
-        #self.generate_cats_graph(data=aggregated)
+        self.generate_correctness_graph(data=aggregated)
+        self.generate_cats_graph(data=aggregated)
         return data
 
     def check_significance(self, model_id: str):
@@ -274,13 +279,20 @@ class Analysis:
         for model in MODELS.keys():
             self.check_significance(model_id=model)
 
-    def generate_correctness_graph(self, dpo: bool = False, data = None):
+    def generate_cot_graphs(self):
+        data = self.analyze_all()['gpt-4o']['general_stats']['en']
+        generate_cot_correctness_graphs(data, 'cot_correct_predictions')
+        generate_cot_cats_graphs(data, 'cot_cats')
+
+    def generate_correctness_graph(self, dpo: bool = False, data = None, cto: bool = False):
         data = (self.analyze_all() if not dpo else self.analyze_dpo_all()) if data is None else data
         lang_data = defaultdict(lambda: defaultdict(lambda: defaultdict(dict)))
         for model, model_data in data.items():
             if dpo and model not in {'llama-8b', 'dpo-llama'}:
                 continue
             elif not dpo and model == 'dpo-llama':
+                continue
+            if cto and model != 'gpt-4o':
                 continue
 
             stats = model_data['general_stats']
@@ -289,12 +301,13 @@ class Analysis:
                 lang_data[lang][model]['Simple']['direct'] = lang_stats['simple']['fine_category']['percentage'].get('Direct', 0)
                 lang_data[lang][model]['Normal']['value'] = lang_stats['normal']['correct']['percentage']['Correct']
                 lang_data[lang][model]['Normal']['direct'] = lang_stats['normal']['fine_category']['percentage'].get('Direct', 0)
-        base_file = self.datatype + '_correct_predictions_{lang}'
+        base_file = self.datatype + '_correct_predictions'
 
         if dpo:
             generate_dpo_correctness_graphs(lang_data, base_file)
         else:
             generate_correctness_graphs(lang_data, base_file)
+            generate_table(lang_data, self.datatype + '_table')
 
     def generate_cats_graph(self, correct_only: bool = False, dpo: bool =  False, data = None):
         data = (self.analyze_all() if not dpo else self.analyze_dpo_all()) if data is None else data
@@ -311,7 +324,7 @@ class Analysis:
                 lang_data[lang][model]['Simple'] = lang_stats['simple'][data_key]['percentage']
                 lang_data[lang][model]['Normal'] = lang_stats['normal'][data_key]['percentage']
 
-        base_file = self.datatype + '_cats_{lang}'
+        base_file = self.datatype + '_cats'
 
         if dpo:
             generate_dpo_cats_graphs(lang_data, correct_only, base_file)
@@ -363,11 +376,10 @@ class Analysis:
             data[model] = {'general_stats': general_stats, 'summary_stats': summary_stats}
         return data
 
-
 if __name__ == '__main__':
     #data = Analysis().analyze_all()
     #print(data)
-    ana = Analysis(datatype='clear_ref')
-    ana.analyze_all()
+    ana = Analysis(datatype='shared_ref')
+    ana.generate_cot_graphs()
     #print(data)
     #Analysis().check_significance()

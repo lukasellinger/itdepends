@@ -9,21 +9,18 @@ from data.loader import JSONLineReader
 from utils.lang_map import LANG_MAP
 from utils.modes import MODES
 
-model = 'dpo-llama' #'deepseek-v3' #'qwen3-32b' #'llama4-maverick' #'gpt-4o-2024-08-06' #'gpt-4o-mini-2024-07-18' #'gpt-4o-2024-08-06' #'qwen/qwen-2.5-72b-instruct:free' #'gpt-4o-2024-08-06'
-model_path = 'lukasellinger/uncertain-dpo-llama-v3p1-8b-instruct' #'gpt-4o-2024-08-06' #'accounts/fireworks/models/llama-v3p1-8b-instruct' #'qwen/qwen3-32b' #'qwen/qwen3-32b' #'gpt-4o-mini-2024-07-18' #'gpt-4o-2024-08-06' #'gpt-4o-mini-2024-07-18' #'accounts/fireworks/models/llama4-maverick-instruct-basic' accounts/fireworks/models/deepseek-v3
-provider = 'runpod' #'openrouter' #'openai' #'fireworks'
-split = 'clear_ref' #'shared_ref' # choose 'shared_ref', 'clear_ref'
+model = 'gpt-4o' #'deepseek-v3' #'qwen3-32b' #'llama4-maverick' #'gpt-4o-2024-08-06' #'gpt-4o-mini-2024-07-18' #'gpt-4o-2024-08-06' #'qwen/qwen-2.5-72b-instruct:free' #'gpt-4o-2024-08-06'
+model_path = 'gpt-4o-2024-08-06' #'gpt-4o-2024-08-06' #'accounts/fireworks/models/llama-v3p1-8b-instruct' #'qwen/qwen3-32b' #'qwen/qwen3-32b' #'gpt-4o-mini-2024-07-18' #'gpt-4o-2024-08-06' #'gpt-4o-mini-2024-07-18' #'accounts/fireworks/models/llama4-maverick-instruct-basic' accounts/fireworks/models/deepseek-v3
+provider = 'openai' #'openrouter' #'openai' #'fireworks'
+split = 'shared_ref' #'shared_ref' # choose 'shared_ref', 'clear_ref'
 orders = list(range(2) if split == 'clear_ref' else range(3))
 
 datadict = load_dataset('lukasellinger/itdepends')
 
-for lang in LANG_MAP.keys():
-    if lang != 'en':
-        continue
-
-    for mode in MODES:
+for lang in ['en']: #LANG_MAP.keys():
+    for mode in ['cot_normal', 'cot_simple']:
         dataset = datadict[f'{lang}_{split}']
-        for order in list(permutations(orders)):
+        for order in [[0, 1, 2]]:#list(permutations(orders)):
             order = list(order)
             #if order != [0, 1]:#, 2]:
             #    continue
