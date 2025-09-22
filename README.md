@@ -21,6 +21,11 @@ This repository contains the code and data for our paper:
 If you use any of the work, please cite the following paper:
 
 ```tex
-@misc{
+@misc{ellinger2025dependsresolvingreferentialambiguity,
+      title={It Depends: Resolving Referential Ambiguity in Minimal Contexts with Commonsense Knowledge}, 
+      author={Lukas Ellinger and Georg Groh},
+      year={2025},
+      url={https://arxiv.org/abs/2509.16107},
+      annote={Comment: Accepted by UncertaiNLP workshop @ EMNLP 2025} 
 }
 ```
