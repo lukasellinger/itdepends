@@ -3,17 +3,15 @@ from itertools import permutations
 from typing import Tuple
 
 import numpy as np
-import pandas as pd
 from spacy.matcher.dependencymatcher import defaultdict
 
 from config import PROJECT_DIR
 from data.loader import JSONLineReader, JSONReader
 from graphics.cats import generate_cats_graphs, generate_dpo_cats_graphs, \
-    generate_cot_cats_graphs  # , #generate_dpo_cats_graphs
+    generate_cot_cats_graphs
 from graphics.correct import generate_correctness_graphs, generate_dpo_correctness_graphs, \
     generate_cot_correctness_graphs
 from latex.create_table import generate_table
-from latex.model_translation import MODEL_TRANSLATION
 from utils.lang_map import LANG_MAP
 from utils.models import MODELS
 from utils.modes import MODES
