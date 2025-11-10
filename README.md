@@ -1,7 +1,7 @@
 # ItDepends
 This repository contains the code and data for our paper:
 
-**It Depends: Resolving Referential Ambiguity with Commonsense in Minimal Contexts**
+[**It Depends: Resolving Referential Ambiguity with Commonsense in Minimal Contexts**](https://aclanthology.org/2025.uncertainlp-main.20/)
 
 > ⚠️ **Note**: The project structure is still a work in progress.
 
@@ -55,11 +55,20 @@ We evaluated using the batch api of openai. Therefore, we have multiple steps:
 If you use any of the work, please cite the following paper:
 
 ```tex
-@misc{ellinger2025dependsresolvingreferentialambiguity,
-      title={It Depends: Resolving Referential Ambiguity in Minimal Contexts with Commonsense Knowledge}, 
-      author={Lukas Ellinger and Georg Groh},
-      year={2025},
-      url={https://arxiv.org/abs/2509.16107},
-      annote={Comment: Accepted by UncertaiNLP workshop @ EMNLP 2025} 
+@inproceedings{ellinger-groh-2025-depends,
+    title = "It Depends: Resolving Referential Ambiguity in Minimal Contexts with Commonsense Knowledge",
+    author = "Ellinger, Lukas  and
+      Groh, Georg",
+    editor = "Noidea, Noidea",
+    booktitle = "Proceedings of the 2nd Workshop on Uncertainty-Aware NLP (UncertaiNLP 2025)",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.uncertainlp-main.20/",
+    doi = "10.18653/v1/2025.uncertainlp-main.20",
+    pages = "229--246",
+    ISBN = "979-8-89176-349-4",
+    abstract = "Ambiguous words or underspecified references require interlocutors to resolve them, often by relying on shared context and commonsense knowledge. Therefore, we systematically investigate whether Large Language Models (LLMs) can leverage commonsense to resolve referential ambiguity in multi-turn conversations and analyze their behavior when ambiguity persists. Further, we study how requests for simplified language affect this capacity. Using a novel multilingual evaluation dataset, we test DeepSeek v3, GPT-4o, Qwen3-32B, GPT-4o-mini, and Llama-3.1-8B via LLM-as-Judge and human annotations. Our findings indicate that current LLMs struggle to resolve ambiguity effectively: they tend to commit to a single interpretation or cover all possible references, rather than hedging or seeking clarification. This limitation becomes more pronounced under simplification prompts, which drastically reduce the use of commonsense reasoning and diverse response strategies. Fine-tuning Llama-3.1-8B with Direct Preference Optimization substantially improves ambiguity resolution across all request types. These results underscore the need for advanced fine-tuning to improve LLMs' handling of ambiguity and to ensure robust performance across diverse communication styles."
 }
 ```
